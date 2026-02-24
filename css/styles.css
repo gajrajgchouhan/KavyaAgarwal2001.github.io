@@ -98,6 +98,15 @@ a {
 }
 
 @media (max-width: 640px) {
+  nav {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  nav h2 {
+    flex: 1;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -171,8 +180,13 @@ nav {
 }
 nav ul {
   flex-wrap: wrap;            /* helps on smaller screens */
-  align-items: center;
   font-size: 0.95rem;
+}
+
+@media (min-width: 641px) {
+  nav ul {
+    align-items: center;
+  }
 }
 
 /* Make icon links feel nicer to click (without changing style) */
