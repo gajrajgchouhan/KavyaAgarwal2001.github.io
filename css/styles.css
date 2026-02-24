@@ -85,6 +85,51 @@ a {
   }
 }
 
+/* --- Mobile navigation --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  color: black;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0.5rem 0 0;
+    margin: 0;
+    border-top: 1px solid #eee;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 0.5rem 0;
+  }
+
+  /* Reset desktop-only spacing tweaks for mobile */
+  nav ul li:nth-last-child(-n+4) {
+    margin-left: 0;
+  }
+
+  nav ul li:nth-last-child(4) {
+    margin-left: 0;
+  }
+}
+
 /* Prevent float from leaking into the next sections */
 #top::after{
   content: "";
